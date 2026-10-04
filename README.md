@@ -60,19 +60,24 @@ sequenceDiagram
 
 ### Setup Instructions
 1.  **Clone the Repository:**
-    ```bash
+    `ash
     git clone https://github.com/your-org/OnEdgeAgent.git
     cd OnEdgeAgent
-    ```
-2.  **Load the Models:**
-    Download the required `.gguf` weights and place them inside the Android application's external files directory:
-    `/storage/emulated/0/Android/data/com.example.onedgeagent/files/`
-3.  **Build the APK:**
+    `
+2.  **Download the Llama-Server Binary:**
+    *   Navigate to the **Releases** tab of this repository.
+    *   Download the pre-compiled libllama-agent.so asset.
+    *   Place the downloaded file into this exact directory inside the project before building:
+        pp/src/main/jniLibs/arm64-v8a/libllama-agent.so
+3.  **Load the Models:**
+    Download the required .gguf weights and place them inside the Android application's external files directory on your physical device:
+    /storage/emulated/0/Android/data/com.example.onedgeagent/files/
+4.  **Build the APK:**
     Open the project in Android Studio or build via Gradle wrapper:
-    ```bash
+    `ash
     ./gradlew assembleRelease
-    ```
-4.  **Install & Enable Accessibility:**
+    `
+5.  **Install & Enable Accessibility:**
     Install the APK, then navigate to **Settings > Accessibility > Downloaded apps > OnEdgeAgent** and toggle the service to **ON**. (Note: If installed via ADB/sideload, you must first allow restricted settings under the app's info page).
 
 ---
@@ -99,3 +104,4 @@ If you use OnEdgeAgent in your academic research, please cite our project:
   howpublished = {\url{https://github.com/your-org/OnEdgeAgent}}
 }
 ```
+
