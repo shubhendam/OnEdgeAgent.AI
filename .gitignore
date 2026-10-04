@@ -24,3 +24,6 @@ assets/*.so
 assets/llama-server
 
 app/src/main/jniLibs/**/*.so
+
+.idea/
+.kotlin/
