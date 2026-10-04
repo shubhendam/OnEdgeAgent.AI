@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    
+    <!-- Node Gradients -->
+    <linearGradient id="cardGradUI" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="cardGradEngine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#311042"/>
+      <stop offset="100%" stop-color="#1E1035"/>
+    </linearGradient>
+    <linearGradient id="cardGradIPC" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B"/>
+      <stop offset="100%" stop-color="#022C22"/>
+    </linearGradient>
+    <linearGradient id="cardGradOS" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+
+    <!-- Arrow Markers -->
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38BDF8"/>
+    </marker>
+    <marker id="arrowPink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#EC4899"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="680" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Title Banner -->
+  <text x="500" y="48" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700" fill="#F8FAFC" letter-spacing="0.5">OnEdgeAgent (OEA) Dual-Loop Architecture</text>
+  <text x="500" y="74" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="400" fill="#94A3B8">100% Tetherless, On-Device Multimodal Android Perception-Action Pipeline</text>
+
+  <!-- Lane Dividers -->
+  <line x1="140" y1="130" x2="140" y2="620" stroke="#334155" stroke-dasharray="6,6" stroke-width="1.5"/>
+  <line x1="380" y1="130" x2="380" y2="620" stroke="#334155" stroke-dasharray="6,6" stroke-width="1.5"/>
+  <line x1="640" y1="130" x2="640" y2="620" stroke="#334155" stroke-dasharray="6,6" stroke-width="1.5"/>
+  <line x1="880" y1="130" x2="880" y2="620" stroke="#334155" stroke-dasharray="6,6" stroke-width="1.5"/>
+
+  <!-- Node 1: User / Floating UI -->
+  <rect x="50" y="90" width="180" height="52" rx="10" fill="url(#cardGradUI)" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="140" y="114" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Floating Overlay</text>
+  <text x="140" y="131" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94A3B8">Jetpack Compose UI</text>
+
+  <!-- Node 2: C++ Llama Engine -->
+  <rect x="290" y="90" width="180" height="52" rx="10" fill="url(#cardGradEngine)" stroke="#C084FC" stroke-width="1.5"/>
+  <text x="380" y="114" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">llama-server (C++)</text>
+  <text x="380" y="131" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#D8B4FE">Port 8080 (The Brain)</text>
+
+  <!-- Node 3: Kotlin IPC Broker -->
+  <rect x="550" y="90" width="180" height="52" rx="10" fill="url(#cardGradIPC)" stroke="#34D399" stroke-width="1.5"/>
+  <text x="640" y="114" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Kotlin IPC Broker</text>
+  <text x="640" y="131" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#A7F3D0">Port 8081 (Orchestration)</text>
+
+  <!-- Node 4: Accessibility Service -->
+  <rect x="790" y="90" width="180" height="52" rx="10" fill="url(#cardGradOS)" stroke="#60A5FA" stroke-width="1.5"/>
+  <text x="880" y="114" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">AccessibilityService</text>
+  <text x="880" y="131" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#93C5FD">Android OS (The Hands)</text>
+
+  <!-- Step 1 -->
+  <path d="M 140 175 L 375 175" stroke="#38BDF8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <text x="250" y="167" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="600" fill="#7DD3FC">1. User Goal Prompt</text>
+
+  <!-- Step 2 -->
+  <path d="M 380 215 L 145 215" stroke="#EC4899" stroke-width="2" marker-end="url(#arrowPink)"/>
+  <text x="260" y="207" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="600" fill="#F472B6">2. Tool Call: get_screen_context()</text>
+
+  <!-- Step 3 -->
+  <path d="M 140 255 L 635 255" stroke="#38BDF8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <text x="380" y="247" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="600" fill="#7DD3FC">3. GET /api/vision/screenshot</text>
+
+  <!-- Step 4 -->
+  <path d="M 640 295 L 875 295" stroke="#10B981" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="760" y="287" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="600" fill="#6EE7B7">4. takeScreenshot() OS API</text>
+
+  <!-- Step 5 -->
+  <path d="M 880 335 L 645 335" stroke="#10B981" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowGreen)"/>
+  <text x="760" y="327" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="600" fill="#6EE7B7">5. Downsampled JPEG Bitmap</text>
+
+  <!-- Step 6 -->
+  <path d="M 640 375 L 145 375" stroke="#38BDF8" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowBlue)"/>
+  <text x="390" y="367" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="600" fill="#7DD3FC">6. Base64 Extracted Payload</text>
+
+  <!-- Step 7 -->
+  <path d="M 140 415 L 375 415" stroke="#38BDF8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <text x="255" y="407" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="600" fill="#7DD3FC">7. Multimodal Tensor Injection</text>
+
+  <!-- Reasoning Node -->
+  <rect x="290" y="445" width="180" height="42" rx="8" fill="#2E1065" stroke="#A855F7" stroke-width="1.2"/>
+  <text x="380" y="463" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#E9D5FF">Tensor Evaluation</text>
+  <text x="380" y="478" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#C084FC">&lt;|think|&gt; Coordinate Math</text>
+
+  <!-- Step 8 -->
+  <path d="M 380 515 L 145 515" stroke="#EC4899" stroke-width="2" marker-end="url(#arrowPink)"/>
+  <text x="260" y="507" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="600" fill="#F472B6">8. click_screen_element(x, y)</text>
+
+  <!-- Step 9 -->
+  <path d="M 140 555 L 635 555" stroke="#38BDF8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <text x="380" y="547" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="600" fill="#7DD3FC">9. POST /api/action/tap (Normalized x, y)</text>
+
+  <!-- Step 10 -->
+  <path d="M 640 595 L 875 595" stroke="#10B981" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="760" y="587" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="600" fill="#6EE7B7">10. dispatchGesture(DisplayMetrics DP)</text>
+
+  <!-- Footer Stats -->
+  <rect x="50" y="635" width="900" height="30" rx="6" fill="#0F172A" stroke="#1E293B"/>
+  <text x="500" y="655" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#64748B">Zero Cloud APIs  •  Zero Python Runtimes  •  Zero ADB/PC Cables  •  Pure ARM64 C++ &amp; Android Accessibility</text>
+</svg>
